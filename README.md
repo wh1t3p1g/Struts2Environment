@@ -1,6 +1,8 @@
 # Struts2Environment
 Struts2 历史版本的漏洞环境,PoC暂时弄了S2-001,S2-005,S2-009,S2-016,S2-032,S2-037
 下文来自http://blog.0kami.cn/2017/01/13/Struts2-history-payload/
+# Usage
+丢到tomcat里去:P
 # PoC
 ## Struts2 S2-001
     影响版本：2.0.0 - 2.0.8
